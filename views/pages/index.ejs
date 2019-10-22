@@ -1,66 +1,331 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <% include ../partials/header.ejs %>
-</head>
+<html lang="es">
+	<head>
+		<title>Naffinity</title>
+        <meta charset="utf-8" />
+        
+        <link href="style.css" rel="stylesheet" />
+        <!-- <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> -->
+		<script src="./jquery-1.11.2.min.js"></script>
 
+	</head>
 <body>
 
-  <% include ../partials/nav.ejs %>
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
-    </a>
-    <h1>Getting Started with Node on Heroku</h1>
-    <p>This is a sample Node application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-nodejs"><span class="glyphicon glyphicon-flash"></span> Getting Started with Node</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/node-js-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
-  </div>
-</div>
 <div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs" class="alert-link">Getting Started with Node on Heroku</a> tutorial.
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/node-js-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it fetched all the dependencies in the <a href="https://github.com/heroku/node-js-getting-started/blob/master/package.json">package.json</a>, creating a deployable slug.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Next Steps</h3>
-      <ul>
-        <li>If you are following the <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started</a> guide, then please head back to the tutorial and follow the next steps!</li>
-        <li>If you deployed this app by deploying the Heroku Button, then in a command line shell, run:</li>
-        <ul>
-          <li><code>git clone https://github.com/heroku/node-js-getting-started.git</code> - this will create a local copy of the source code for the app</li>
-          <li><code>cd node-js-getting-started</code> - change directory into the local source code repository</li>
-          <li><code>heroku git:remote -a &lt;your-app-name></code> - associate the Heroku app with the repository</li>
-          <li>You'll now be set up to run the app locally, or <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#push-local-changes">deploy changes</a> to Heroku</li>
+    <input class="start" type="checkbox" id="start">
+    <label for="start" class="start-label">START / STOP</label>
+    <div class="clock-container">
+      <div class="hours">
+        <ul class="hours-list">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
         </ul>
-      </ul>
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">Getting Started with Node on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-nodejs">Deploying Node Apps on Heroku</a></li>
-      </ul>
+      </div>
+      <div class="minutes">
+        <ul class="minutes-list">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+          <li>36</li>
+          <li>37</li>
+          <li>38</li>
+          <li>39</li>
+          <li>40</li>
+          <li>41</li>
+          <li>42</li>
+          <li>43</li>
+          <li>44</li>
+          <li>45</li>
+          <li>46</li>
+          <li>47</li>
+          <li>48</li>
+          <li>49</li>
+          <li>50</li>
+          <li>51</li>
+          <li>52</li>
+          <li>53</li>
+          <li>54</li>
+          <li>55</li>
+          <li>56</li>
+          <li>57</li>
+          <li>58</li>
+          <li>59</li>
+        </ul>
+      </div>
+      <div class="seconds">
+        <ul class="seconds-list">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+          <li>36</li>
+          <li>37</li>
+          <li>38</li>
+          <li>39</li>
+          <li>40</li>
+          <li>41</li>
+          <li>42</li>
+          <li>43</li>
+          <li>44</li>
+          <li>45</li>
+          <li>46</li>
+          <li>47</li>
+          <li>48</li>
+          <li>49</li>
+          <li>50</li>
+          <li>51</li>
+          <li>52</li>
+          <li>53</li>
+          <li>54</li>
+          <li>55</li>
+          <li>56</li>
+          <li>57</li>
+          <li>58</li>
+          <li>59</li>
+        </ul>
+      </div>
+      <div class="milliseconds">
+        <ul class="milliseconds-list">
+          <li>00</li>
+          <li>01</li>
+          <li>02</li>
+          <li>03</li>
+          <li>04</li>
+          <li>05</li>
+          <li>06</li>
+          <li>07</li>
+          <li>08</li>
+          <li>09</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+          <li>32</li>
+          <li>33</li>
+          <li>34</li>
+          <li>35</li>
+          <li>36</li>
+          <li>37</li>
+          <li>38</li>
+          <li>39</li>
+          <li>40</li>
+          <li>41</li>
+          <li>42</li>
+          <li>43</li>
+          <li>44</li>
+          <li>45</li>
+          <li>46</li>
+          <li>47</li>
+          <li>48</li>
+          <li>49</li>
+          <li>50</li>
+          <li>51</li>
+          <li>52</li>
+          <li>53</li>
+          <li>54</li>
+          <li>55</li>
+          <li>56</li>
+          <li>57</li>
+          <li>58</li>
+          <li>59</li>
+          <li>60</li>
+          <li>61</li>
+          <li>62</li>
+          <li>63</li>
+          <li>64</li>
+          <li>65</li>
+          <li>66</li>
+          <li>77</li>
+          <li>68</li>
+          <li>69</li>
+          <li>70</li>
+          <li>71</li>
+          <li>72</li>
+          <li>73</li>
+          <li>74</li>
+          <li>75</li>
+          <li>76</li>
+          <li>77</li>
+          <li>78</li>
+          <li>79</li>
+          <li>80</li>
+          <li>81</li>
+          <li>82</li>
+          <li>83</li>
+          <li>84</li>
+          <li>85</li>
+          <li>86</li>
+          <li>87</li>
+          <li>88</li>
+          <li>89</li>
+          <li>90</li>
+          <li>91</li>
+          <li>92</li>
+          <li>93</li>
+          <li>94</li>
+          <li>95</li>
+          <li>96</li>
+          <li>97</li>
+          <li>98</li>
+          <li>99</li>
+        </ul>
+      </div>
     </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+    <div class="watch">
+      <div class="minutes-hand">
+      </div>
+      <div class="hours-hand">
+      </div>
+    </div>
   </div>
-</div>
 
+  
+  <div class="" style="width:250px;position:absolute;top:100px;right:50px;" >
+    <span class="titulo_azul">Hoy dirige:</span>
+   
+    <select name="cboIntegrantes" id="cboIntegrantes" style="width:120px;background:transparent;font-weight:bold;" class="texto_azul">
+        <option value="none" selected>Ninguno</option>		  
+        <option value="nuribe">Nelson</option>		  
+        <option value="mmamani">Marco</option>
+        <option value="avasquez">Andrés</option>
+        <option value="irioja">Isabel</option>
+        <option value="jleon">Javier</option>
+        <option value="ejustiniano">Erwin</option>
+    </select>
+    <br>
+    <img name="imgIntegrante" id="imgIntegrante" src="user2.png" alt="" title="" width="250" height="250">
+    </div> 
 
+    <div class="centrado" align="center">
+		<a href="http://sc01srdt01:8080/tfs/DefaultCollection/NAffinity/_backlogs/taskboard?_a=requirements" title="Ir al TFS web" target="_blank" class="enlace" >Ir a la sala del Equipo</a>
+		
+	</div>
+
+    <script>
+        $(document).ready(function(){
+        
+            //-----------------------------------------------------------------
+            //cambiar imagen cuando cambie seleccion en el combo de integrantes
+            $('select[name=cboIntegrantes]').change(function() {
+                switch (true) {
+                    case ($("#cboIntegrantes").val()=="nuribe"):
+                        $('#imgIntegrante').attr("src","nuribe.png");
+                        break;
+                    case ($("#cboIntegrantes").val()=="mmamani"):
+                       $('#imgIntegrante').attr("src","mmamani.png");
+                        break;
+                    case ($("#cboIntegrantes").val()=="avasquez"):
+                        $('#imgIntegrante').attr("src","avasquez.jpeg");
+                        break;
+                    case ($("#cboIntegrantes").val()=="irioja"):
+                        $('#imgIntegrante').attr("src","irioja.png");
+                        break;
+                    case ($("#cboIntegrantes").val()=="jleon"):
+                        $('#imgIntegrante').attr("src","jleon.jpg");
+                        break;
+                    case ($("#cboIntegrantes").val()=="ejustiniano"):
+                        $('#imgIntegrante').attr("src","ejustiniano.png");
+                        break;
+                    default:
+                        $('#imgIntegrante').attr("src","user2.png");
+                }
+                
+                //$('#imgIntegrante').attr("src","irioja.jpg");
+            });
+        });
+    </script>
 </body>
 </html>
