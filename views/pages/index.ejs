@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>Naffinity</title>
-        <meta charset="utf-8" />
-        
-        <link href="style.css" rel="stylesheet" />
-        <!-- <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script> -->
-		<script src="./jquery-1.11.2.min.js"></script>
 
-	</head>
+<head>
+  <title>Naffinity</title>
+  <meta charset="utf-8" />
+
+  <link href="stylesheets/style.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
 <body>
 
-<div class="container">
+  <div class="container">
     <input class="start" type="checkbox" id="start">
     <label for="start" class="start-label">START / STOP</label>
     <div class="clock-container">
@@ -272,60 +273,63 @@
     </div>
   </div>
 
-  
-  <div class="" style="width:250px;position:absolute;top:100px;right:50px;" >
+
+  <div class="" style="width:250px;position:absolute;top:100px;right:50px;">
     <span class="titulo_azul">Hoy dirige:</span>
-   
-    <select name="cboIntegrantes" id="cboIntegrantes" style="width:120px;background:transparent;font-weight:bold;" class="texto_azul">
-        <option value="none" selected>Ninguno</option>		  
-        <option value="nuribe">Nelson</option>		  
-        <option value="mmamani">Marco</option>
-        <option value="avasquez">Andrés</option>
-        <option value="irioja">Isabel</option>
-        <option value="jleon">Javier</option>
-        <option value="ejustiniano">Erwin</option>
+
+    <select name="cboIntegrantes" id="cboIntegrantes" style="width:120px;background:transparent;font-weight:bold;"
+      class="texto_azul">
+      <option value="none" selected>Ninguno</option>
+      <option value="nuribe">Nelson</option>
+      <option value="mmamani">Marco</option>
+      <option value="avasquez">Andrés</option>
+      <option value="irioja">Isabel</option>
+      <option value="jleon">Javier</option>
+      <option value="ejustiniano">Erwin</option>
     </select>
     <br>
     <img name="imgIntegrante" id="imgIntegrante" src="user2.png" alt="" title="" width="250" height="250">
-    </div> 
+  </div>
 
-    <div class="centrado" align="center">
-		<a href="http://sc01srdt01:8080/tfs/DefaultCollection/NAffinity/_backlogs/taskboard?_a=requirements" title="Ir al TFS web" target="_blank" class="enlace" >Ir a la sala del Equipo</a>
-		
-	</div>
+  <div class="centrado" align="center">
+    <a href="http://sc01srdt01:8080/tfs/DefaultCollection/NAffinity/_backlogs/taskboard?_a=requirements"
+      title="Ir al TFS web" target="_blank" class="enlace">Ir a la sala del Equipo</a>
 
-    <script>
-        $(document).ready(function(){
-        
-            //-----------------------------------------------------------------
-            //cambiar imagen cuando cambie seleccion en el combo de integrantes
-            $('select[name=cboIntegrantes]').change(function() {
-                switch (true) {
-                    case ($("#cboIntegrantes").val()=="nuribe"):
-                        $('#imgIntegrante').attr("src","nuribe.png");
-                        break;
-                    case ($("#cboIntegrantes").val()=="mmamani"):
-                       $('#imgIntegrante').attr("src","mmamani.png");
-                        break;
-                    case ($("#cboIntegrantes").val()=="avasquez"):
-                        $('#imgIntegrante').attr("src","avasquez.jpeg");
-                        break;
-                    case ($("#cboIntegrantes").val()=="irioja"):
-                        $('#imgIntegrante').attr("src","irioja.png");
-                        break;
-                    case ($("#cboIntegrantes").val()=="jleon"):
-                        $('#imgIntegrante').attr("src","jleon.jpg");
-                        break;
-                    case ($("#cboIntegrantes").val()=="ejustiniano"):
-                        $('#imgIntegrante').attr("src","ejustiniano.png");
-                        break;
-                    default:
-                        $('#imgIntegrante').attr("src","user2.png");
-                }
-                
-                //$('#imgIntegrante').attr("src","irioja.jpg");
-            });
-        });
-    </script>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+
+      //-----------------------------------------------------------------
+      //cambiar imagen cuando cambie seleccion en el combo de integrantes
+      $('select[name=cboIntegrantes]').change(function () {
+        switch (true) {
+          case ($("#cboIntegrantes").val() == "nuribe"):
+            $('#imgIntegrante').attr("src", "nuribe.png");
+            break;
+          case ($("#cboIntegrantes").val() == "mmamani"):
+            $('#imgIntegrante').attr("src", "mmamani.png");
+            break;
+          case ($("#cboIntegrantes").val() == "avasquez"):
+            $('#imgIntegrante').attr("src", "avasquez.jpeg");
+            break;
+          case ($("#cboIntegrantes").val() == "irioja"):
+            $('#imgIntegrante').attr("src", "irioja.png");
+            break;
+          case ($("#cboIntegrantes").val() == "jleon"):
+            $('#imgIntegrante').attr("src", "jleon.jpg");
+            break;
+          case ($("#cboIntegrantes").val() == "ejustiniano"):
+            $('#imgIntegrante').attr("src", "ejustiniano.png");
+            break;
+          default:
+            $('#imgIntegrante').attr("src", "user2.png");
+        }
+
+        //$('#imgIntegrante').attr("src","irioja.jpg");
+      });
+    });
+  </script>
 </body>
+
 </html>
