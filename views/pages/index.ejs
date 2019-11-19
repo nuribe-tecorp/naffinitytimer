@@ -286,6 +286,7 @@
       <option value="irioja">Isabel</option>
       <option value="jleon">Javier</option>
       <option value="ejustiniano">Erwin</option>
+      <option value="gflores">Gabriel</option>
     </select>
     <br>
     <img name="imgIntegrante" id="imgIntegrante" src="user2.png" alt="" title="" width="250" height="250">
@@ -321,6 +322,9 @@
             break;
           case ($("#cboIntegrantes").val() == "ejustiniano"):
             $('#imgIntegrante').attr("src", "ejustiniano.png");
+            break;
+          case ($("#cboIntegrantes").val() == "gflores"):
+            $('#imgIntegrante').attr("src", "gabo-simpson.jpg");
             break;
           default:
             $('#imgIntegrante').attr("src", "user2.png");
